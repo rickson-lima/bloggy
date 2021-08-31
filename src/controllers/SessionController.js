@@ -13,7 +13,7 @@ class SessionController {
       return response.status(401).json({ error: 'User is not registered.' })
 
     if (!(await bcrypt.compare(password, user.password))) {
-      return response.status(401).json({ error: 'Invalid password. ' })
+      return response.status(401).json({ error: 'Invalid password.' })
     }
 
     const { id, name } = user

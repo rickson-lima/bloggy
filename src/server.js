@@ -11,7 +11,7 @@ const server = express()
 const port = process.env.PORT || 3000
 
 mongoose.connect(
-  `mongodb+srv://dbAdmin:${process.env.DB_PASSWORD}@clusterbloggy.g1t2e.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+  `mongodb+srv://dbAdmin:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
 )
 

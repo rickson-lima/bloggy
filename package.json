@@ -1,23 +1,25 @@
 {
-    "name": "bloggy",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-        "dev": "nodemon src/server.js"
-    },
-    "dependencies": {
-        "bcrypt": "^5.0.1",
-        "cors": "^2.8.5",
-        "dotenv": "^10.0.0",
-        "express": "^4.17.1",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^6.0.3"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.12",
-        "sucrase": "^3.20.1"
-    },
-    "license": "MIT",
-    "repository": "https://github.com/rickson-lima/bloggy",
-    "author": "Rickson A. de Lima <lima.rickson20@gmail.com>"
+  "name": "bloggy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "sucrase": "^3.20.1"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/rickson-lima/bloggy",
+  "author": "Rickson A. de Lima <lima.rickson20@gmail.com>"
 }

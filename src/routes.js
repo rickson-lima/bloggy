@@ -18,5 +18,6 @@ routes.post('/posts', PostController.store)
 routes.get('/posts', PostController.index) // get all posts
 routes.get('/:user_id/posts', PostController.indexAll) // get all posts of an user
 routes.get('/posts/:post_id', PostController.show) // get all posts of an user
+routes.delete('/posts/:post_id', PostController.delete)
 
 export default routes
